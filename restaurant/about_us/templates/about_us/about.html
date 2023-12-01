@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}About Us{% endblock title %}
+
+{% block css %}
+    {{ block.super }}
+    <link href={% static "about.css" %} rel="stylesheet">
+{% endblock css %}
+
+{% block content %}
+<section>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img src={% static "dev_nayan.png" %} alt="Dev_Nayan" class="w-75 about-img">
+            </div>
+            <div class="col-md-6">
+                <h2 class="about-title text-uppercase">About Us</h2>
+                <h3 class="name">Abdullah Nayan</h3>
+                <h5>CEO, Reataura</h5>
+                <p class="about-text mt-4">Welcome to Restaura, where culinary excellence meets a warm and inviting atmosphere. At Restaura, we are passionate about delivering an unforgettable dining experience that goes beyond just great food. Our restaurant is a celebration of flavors, crafted with care and creativity to delight your palate.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Meal{% endblock title %}
+
+{% block css %}
+    {{ block.super }}
+    <link href={% static "meal.css" %} rel="stylesheet">
+{% endblock css %}
+
+{% block content %}
+<section>
+    <div class="container">
+        <div class="row g-4 my-5">
+            {% for category in categories %}
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src={{category.strCategoryThumb}} class="card-img-top img-fluid p-4" alt={{category.strCategory}}>
+                        <div class="card-body">
+                          <h6>Category Id: {{category.idCategory}}</h6>
+                          <h4 class="card-title">{{category.strCategory}}</h4>
+                          <p class="card-text">{{ category.strCategoryDescription | truncatewords:10}}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

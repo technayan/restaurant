@@ -1,0 +1,39 @@
+body {
+    background: #fff7e3;
+}
+
+.navbar {
+    background: transparent;
+}
+
+.nav-link:hover {
+    color: #dba82b !important;
+}
+
+.hero-section {
+    height: 100vh;
+    background-image: url(homepage-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #fff;
+    margin-top: -85px;
+}
+
+.hero-heading {
+    font-size: 35px;
+}
+
+.hero-title {
+    font-size: 100px;
+    color: #dba82b;
+    font-weight: 700;
+}
+
+.hero-desc {
+    font-size: 20px;
+}
+
+.hero-img {
+    border-radius: 20px;
+}
